@@ -1,0 +1,53 @@
+Note that all versions of GATK starting with 4.0.8.0 use a different wrapper
+script (gatk) than previous versions of GATK.  You might need to update your
+jobs accordingly.
+
+The complete GATK resource bundle is in /sw/data/GATK
+
+See 'module help GATK/4.3.0.0' for information on activating the GATK conda
+environment for using DetermineGermlineContigPloidy and similar other tools.
+01:28:58.801 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/sw/bioinfo/GATK/4.3.0.0/rackham/gatk-package-4.3.0.0-local.jar!/com/intel/gkl/native/libgkl_compression.so
+01:28:58.945 INFO  FilterMutectCalls - ------------------------------------------------------------
+01:28:58.945 INFO  FilterMutectCalls - The Genome Analysis Toolkit (GATK) v4.3.0.0
+01:28:58.945 INFO  FilterMutectCalls - For support and documentation go to https://software.broadinstitute.org/gatk/
+01:28:58.946 INFO  FilterMutectCalls - Executing as rapha@r343.uppmax.uu.se on Linux v3.10.0-1160.118.1.el7.x86_64 amd64
+01:28:58.946 INFO  FilterMutectCalls - Java runtime: Java HotSpot(TM) 64-Bit Server VM v1.8.0_151-b12
+01:28:58.946 INFO  FilterMutectCalls - Start Date/Time: May 9, 2024 1:28:58 AM CEST
+01:28:58.946 INFO  FilterMutectCalls - ------------------------------------------------------------
+01:28:58.946 INFO  FilterMutectCalls - ------------------------------------------------------------
+01:28:58.947 INFO  FilterMutectCalls - HTSJDK Version: 3.0.1
+01:28:58.947 INFO  FilterMutectCalls - Picard Version: 2.27.5
+01:28:58.947 INFO  FilterMutectCalls - Built for Spark Version: 2.4.5
+01:28:58.947 INFO  FilterMutectCalls - HTSJDK Defaults.COMPRESSION_LEVEL : 2
+01:28:58.947 INFO  FilterMutectCalls - HTSJDK Defaults.USE_ASYNC_IO_READ_FOR_SAMTOOLS : false
+01:28:58.948 INFO  FilterMutectCalls - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_SAMTOOLS : true
+01:28:58.948 INFO  FilterMutectCalls - HTSJDK Defaults.USE_ASYNC_IO_WRITE_FOR_TRIBBLE : false
+01:28:58.948 INFO  FilterMutectCalls - Deflater: IntelDeflater
+01:28:58.948 INFO  FilterMutectCalls - Inflater: IntelInflater
+01:28:58.948 INFO  FilterMutectCalls - GCS max retries/reopens: 20
+01:28:58.948 INFO  FilterMutectCalls - Requester pays: disabled
+01:28:58.948 INFO  FilterMutectCalls - Initializing engine
+01:28:59.716 INFO  FeatureManager - Using codec VCFCodec to read file file:///crex/proj/snic2022-6-165/canine-osteosarcoma-NCCM-project/bioinformatics_course/project2/test_run/SRR8691799_C2_vs_SRR8691799_C2.recal.chr21.subs50.somatic.vcf.gz
+01:28:59.836 INFO  IntervalArgumentCollection - Processing 51742555 bp from intervals
+01:28:59.865 INFO  FilterMutectCalls - Done initializing engine
+01:29:00.008 INFO  ProgressMeter - Starting traversal
+01:29:00.010 INFO  ProgressMeter -        Current Locus  Elapsed Minutes    Variants Processed  Variants/Minute
+01:29:00.011 INFO  FilterMutectCalls - Starting pass 0 through the variants
+01:29:01.072 INFO  FilterMutectCalls - Finished pass 0 through the variants
+01:29:01.512 INFO  FilterMutectCalls - Starting pass 1 through the variants
+01:29:01.954 INFO  FilterMutectCalls - Finished pass 1 through the variants
+01:29:02.029 INFO  FilterMutectCalls - Starting pass 2 through the variants
+01:29:02.371 INFO  FilterMutectCalls - Finished pass 2 through the variants
+01:29:02.373 INFO  FilterMutectCalls - Starting pass 3 through the variants
+01:29:02.997 INFO  FilterMutectCalls - Finished pass 3 through the variants
+01:29:03.065 INFO  FilterMutectCalls - No variants filtered by: AllowAllVariantsVariantFilter
+01:29:03.065 INFO  FilterMutectCalls - 0 read(s) filtered by: AllowAllReadsReadFilter 
+
+01:29:03.066 INFO  ProgressMeter -       chr21:38529630              0.1                  8580         168510.6
+01:29:03.066 INFO  ProgressMeter - Traversal complete. Processed 8580 total variants in 0.1 minutes.
+01:29:03.078 INFO  FilterMutectCalls - Shutting down engine
+[May 9, 2024 1:29:03 AM CEST] org.broadinstitute.hellbender.tools.walkers.mutect.filtering.FilterMutectCalls done. Elapsed time: 0.07 minutes.
+Runtime.totalMemory()=2130706432
+Using GATK jar /sw/bioinfo/GATK/4.3.0.0/rackham/gatk-package-4.3.0.0-local.jar
+Running:
+    java -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 -jar /sw/bioinfo/GATK/4.3.0.0/rackham/gatk-package-4.3.0.0-local.jar FilterMutectCalls -R data/genome/cf4.b6.14.fa -L chr21 -V SRR8691799_C2_vs_SRR8691799_C2.recal.chr21.subs50.somatic.vcf.gz -O SRR8691799_C2_vs_SRR8691799_C2.recal.chr21.subs50.somatic.filt.vcf.gz
