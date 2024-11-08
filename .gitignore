@@ -9,3 +9,10 @@
 *vcf.gz.tbi
 *vcf
 *gz
+data/genome
+test_run/vcf.py
+*__pycache__*
+prep_data/SRA_samples_ID_conversion.txt
+prep_data/vcf.py
+test_run/somatic_variant_calling.sh
+test_run/data
